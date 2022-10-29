@@ -124,6 +124,9 @@ let arrayDeReceitas = [
     {nome:"Strogonoff de Carne", ingredientes: "500 gramas de carne, 1 pitada de pimenta-do-reino, 3 colheres (sopa) de manteiga, meia cebola, 1 tablete de MAGGI Caldo Carne, 4 colheres (sopa) de água fervente, meia xícara (chá) de conhaque, 200 g de champignons em conserva fatiados, 3 colheres (sopa) de purê de tomate, 1 colher (sopa) de mostarda, 2 colheres (sopa) de ketchup, 1 lata Creme de Leite",
     
     },
+    {nome:"Lasanha a Bolonhesa", ingredientes:"500g massa de lasanha, 500g carne moída, 1cx creme de leite, 500g de presunto, 500g de mussarela, 1 cebola, 1cx molho de tomate"
+    
+    },
     
     {nome:"Risoto vegetariano", ingredientes: "4 xícaras (chá) de água, 2 tabletes de Caldo Legumes, 3 colheres (sopa) de manteiga, 1 xícara (chá) de arroz integral tipo agulinha, 2 colheres (sopa) de semente de linhaça, 1 pitada de açafrão, 1 cenoura em cubos, 1 xícara (chá) de brócolis aferventados, 1 caixa de creme de leite"
     
@@ -132,14 +135,15 @@ let arrayDeReceitas = [
 function userInput() {
     let digitado = document.getElementById('user-input').value;
   
-    let container = document.getElementById('receitas');
+    let container = document.getElementById('arrayDeReceitas');
   
     container.innerHTML = '';
-    let receitasEscolhidas = receitas.filter(
+    let receitasEscolhidas = arrayDeReceitas.filter(
       receita => receita.name.toLowerCase().includes(digitado.toLowerCase())
     );
   
-    for (let receita of receitasEscolhidas) {
-      container.innerHTML += `<div> ${receita.name} </div>`;
+    for (let arrayDeReceitas of receitasEscolhidas) {
+      container.innerHTML += `<div> ${arrayDeReceitas.name} </div>`;
     }
   }
+  
